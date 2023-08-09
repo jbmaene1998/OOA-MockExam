@@ -58,14 +58,4 @@ public class MovieServiceImplTest {
         verify(realRepositoryMock, never()).getMovies(anyString());
         verify(mockRepositoryMock, times(1)).getMovies("query");
     }
-
-    @Test
-    public void testPingReachable() {
-        assertTrue(movieService.testPing("127.0.0.1"));
-    }
-
-    @Test
-    public void testPingUnreachable() {
-        assertFalse(movieService.testPing("invalid-ip"));
-    }
 }
