@@ -1,10 +1,8 @@
 package core.helpers;
 
-import core.exceptions.MovieException;
 import org.jasypt.util.text.StrongTextEncryptor;
 import org.mindrot.jbcrypt.BCrypt;
 
-import java.util.Scanner;
 
 public class Crypto {
 

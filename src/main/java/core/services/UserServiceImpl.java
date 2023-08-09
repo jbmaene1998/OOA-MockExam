@@ -1,7 +1,6 @@
 package core.services;
 
 import core.exceptions.MovieException;
-import core.helpers.Crypto;
 import core.interfaces.repositories.UserRepository;
 import core.interfaces.services.UserService;
 import core.helpers.LoginState;

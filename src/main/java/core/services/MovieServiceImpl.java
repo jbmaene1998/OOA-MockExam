@@ -7,10 +7,7 @@ import infrastructure.helpers.ServerConnection;
 import infrastructure.repositories.MovieRepositoryImpl;
 import infrastructure.repositories.mocks.MockMovieRepositoryImpl;
 
-import java.io.IOException;
-import java.net.InetAddress;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class MovieServiceImpl implements MovieService {
     private final MovieRepository _movieRepository;
@@ -23,7 +20,7 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<Movie> getMovies(String query) {
-        if (ServerConnection.TestConnection()) {
+        if (ServerConnection.testConnection()) {
             return _mockMovieRepository.getMovies(query);
         }
         return _movieRepository.getMovies(query);

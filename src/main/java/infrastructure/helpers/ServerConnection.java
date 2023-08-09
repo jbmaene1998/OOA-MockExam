@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.security.SecureRandom;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -43,7 +42,7 @@ public class ServerConnection {
         }
     }
 
-    public static boolean TestConnection() {
+    public static boolean testConnection() {
         try {
             InetAddress inetAddress = InetAddress.getByName(HOST_IP);
             return inetAddress.isReachable(1000); // Timeout in milliseconds

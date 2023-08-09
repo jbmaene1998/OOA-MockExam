@@ -2,7 +2,6 @@ package api.controllers;
 
 
 import core.entities.Movie;
-import core.helpers.LoginState;
 import core.interfaces.services.MovieService;
 import core.interfaces.services.ReviewService;
 import core.services.MovieServiceImpl;
@@ -12,7 +11,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
