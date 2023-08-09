@@ -20,7 +20,6 @@ public class Crypto {
         encryptor = new StrongTextEncryptor();
         encryptor.setPassword(KEY);
     }
-
     public String encrypt(String in) {
         return encryptor.encrypt(in);
     }
@@ -28,20 +27,11 @@ public class Crypto {
     public String decrypt(String in) {
         return encryptor.decrypt(in);
     }
-
     public String hash(String in) {
         return BCrypt.hashpw(in, BCrypt.gensalt());
     }
 
     public boolean comparePasswords(String in, String hashed) {
         return BCrypt.checkpw(in, hashed);
-    }
-
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("What do you want to encrypt?"); // NOSONAR: this IS a CL-application.
-        String line = in.nextLine();
-        System.out.println(Crypto.getInstance().encrypt(line));  // NOSONAR: this IS a CL-application.
     }
 }
