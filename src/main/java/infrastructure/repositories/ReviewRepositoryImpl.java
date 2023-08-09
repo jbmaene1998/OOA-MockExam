@@ -18,8 +18,6 @@ public class ReviewRepositoryImpl implements ReviewRepository {
     private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle("config/queries");
     @Override
     public void addReview(String username, int movieId, String reviewText, int score) {
-        score = 5;
-
         try (Connection connection = getConnection(); PreparedStatement stmt = connection.prepareStatement(RESOURCE_BUNDLE.getString("insert.review"))){
 
             stmt.setString(1, username);
